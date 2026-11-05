@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: nail-booking
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SHOP_NAME
+        value: Nail Salon
+      - key: STAFF_NAMES
+        value: "Thợ 1,Thợ 2,Thợ 3,Thợ 4"
+      - key: SHOP_TIMEZONE
+        value: America/Los_Angeles
